@@ -27,7 +27,7 @@ function Search() {
     return (
         <div className='cursor-pointer' ref={searchRef}>
             <form onSubmit={handleSubmit}>
-                <input type="text" className={`${isOpen ? 'block' : 'hidden'} border px-4 py-1 rounded-full border-primary text-primary`} placeholder='Search Anime' onChange={(e) => setSearch(e.target.value)} />
+                <input type="text" className={`${isOpen ? 'block' : 'hidden'} border px-4 py-2 rounded-full border-primary text-primary w-full max-w-[250px] ml-3`} placeholder='Search Anime' onChange={(e) => setSearch(e.target.value)} />
             </form>
             <CiSearch size={30} className={`${isOpen ? 'hidden' : 'block'} text-primary`} onClick={() => setIsOpen(prev => !prev)} />
         </div>

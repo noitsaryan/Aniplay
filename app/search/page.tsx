@@ -7,7 +7,7 @@ async function page(props: { searchParams: { [key: string]: string } }) {
     return (
         <main>
             <h1 className='text-xl font-bold mx-4 text-primary  mt-8 mb-2'> Search Results :  </h1>
-            <div className='grid grid-cols-2 p-4 gap-4'>
+            <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 p-4 gap-4'>
                 {
                     data && data.map((e: DataType, i: any) => (
                         <AnimeCard key={i} data={e} />

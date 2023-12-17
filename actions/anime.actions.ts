@@ -123,6 +123,7 @@ export const streamingLinks = async (id: string, category: "sub" | "dub") => {
     try {
         const response = await fetch(`https://api-aniwatch.onrender.com/anime/episode-srcs?id=${id}&category=${category}&server=vidstreaming`);
         const data = await response.json()
+        console.log(data);
         if (!data) return { message: "Data did not fetched.", success: false }
         return { data, success: true }
     } catch (error: any) {
